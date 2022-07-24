@@ -61,7 +61,17 @@ AI-UBREM is a project of IAAC, Institute for Advanced Architecture of Catalonia 
 
 An intensive research process for more than a month to gather energy data about consumption, use, and u-values of buildings in Vienna city to rely on and build a  AI-UBREM dataset to put to test.  Multiple UN-funded projects and reliable governmental city websites, in addition to the AIT of Vienna city along with published data , reports, and simulation results are utilized to build both BEC and PV potential datasets.
 
-Open street maps has been utilized to retrieve Vienna buildings data like geometry, building typology, height, level, long and lat and OSMID which builds our main geojson and geo-referenced files. 
+Open street maps has been utilized to retrieve Vienna buildings data like geometry, building typology, height, level, long and lat and OSMID which builds our main geojson and geo-referenced files using colab and retrieved libraries like geopanda , networkx and numpy. 
+Link:
+
+
+________________________________________
+Mapping APIs
+https://www.openstreetmap.org/#map=16/41.3893/2.1725
+https://developers.google.com/maps/documentation/maps-static/overview
+https://developers.google.com/maps/documentation/streetview/overview
+https://docs.mapbox.com/api/overview/
+
 
 ![image](https://user-images.githubusercontent.com/108461498/180660406-dcb0da21-3190-49bb-9c61-49e3fdae42c4.png)
 
