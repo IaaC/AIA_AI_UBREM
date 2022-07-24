@@ -26,7 +26,7 @@
       </ul>
     </li>
   <ul>
-        <li><a href="#DNN-Solar-Radiation">DNN-Solar-Radiation</a></li>
+        <li><a href="#ML-Solar-Radiation">ML-Solar-Radiation</a></li>
       </ul>
     </li>
     <li><a href="#gh">Grasshopper Analytics and Generation</a></li>
@@ -132,9 +132,24 @@ An intesive research process for more than a month to gather energy data about c
 
 mse_test: 0.001160272629931569
  
-<!-- DNN-Solar-Radiation -->
-## Dnn-Solar-Radiation
+<!-- ML-Solar-Radiation -->
+## ML-Solar-Radiation
 
+Multiple iteration and approaches are utilized to get the most reliable solar radiation prediction. Linear regression and neural network regressions are put to trial. At the end, DNN models of 5 dense layers is the one with best results for prediction. 
+
+![image](https://user-images.githubusercontent.com/108461498/180662092-10fe4c61-a59a-4634-92f1-dd40d2d97504.png)
+
+4 features are utilized to train a DNN of 5 dense layers , Building height, volume, roof area, and solar radiation. 
+
+![image](https://user-images.githubusercontent.com/108461498/180662107-f552723a-5ac5-44e8-afaa-27f5b9d2bc8a.png)
+
+
+![image](https://user-images.githubusercontent.com/108461498/180661782-40c3d61f-0459-4e01-bf8e-ffa033e89d5c.png)
+
+
+![image](https://user-images.githubusercontent.com/108461498/180661725-b7888646-ee0f-487f-ac52-c3a0f9e93d20.png)
+
+![image](https://user-images.githubusercontent.com/108461498/180661731-1a18d801-6747-4b28-8bc8-04aa790c8d3d.png)
 
 
 <!-- Grasshopper-Scripts -->
