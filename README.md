@@ -40,7 +40,12 @@
 
 <!-- About the Project -->
 ## About-the-project
-This project addresses Energy consumption(EC) mitigation to manifest the concept of postitive Energy District (PED) relying on renewable energy (RE) resources like thermal, Biogas, wind and PV cells. The project utilizes ANN to predict energy consumption of 5 building typologies in Vienna city, residential, detched, apartments, school and office. Shedding light to the fact that vienna city energy conumption of household contributes to almost one third of vienna's total EC.
+
+Urban Building Energy modeling (UBEM) demonstrated a reliable tool to visualize city fabric and its complex systems use patterns. This tool enables visualizing and prediction of energy and solar potential of buildings as an AI-based UBREM. U-value is an index that measure building envelop/ structure heat transmittance. The lower the u-value shows better insulation, thus decreases your building energy consumption. Use the sliders to alter u-values for walls, windows, roof and basement. A single good insulation layer adding to your wall can decrease building energy consumption (BEC) by almost 30%. Hence, building energy demand (BED) can be met using PV cells on roof top, the PV potential can even exceed BED and support neighboring units manifesting a Positive Energy District (PED) with renewable energy (RE).
+
+![image](https://user-images.githubusercontent.com/108461498/180661208-f4f61a7c-6820-4581-91c2-83ab61948f3c.png)
+
+AI-UBREM addresses Energy consumption(EC) mitigation to manifest the concept of postitive Energy District (PED) relying on renewable energy (RE) resources like thermal, Biogas, wind and PV cells. The project utilizes ANN to predict energy consumption of 5 building typologies in Vienna city, residential, detched, apartments, school and office. Shedding light to the fact that vienna city energy conumption of household contributes to almost one third of vienna's total EC.
 
 ![image](https://user-images.githubusercontent.com/108461498/180659915-480110e7-adf0-43a9-bdcd-b5ab9dc8df5f.png)
 
@@ -54,9 +59,13 @@ AI-UBREM is a project of IAAC, Institute for Advanced Architecture of Catalonia 
 <!-- Data-Generation-->
 ## Data-Preparation
 
-An intensive research process for more than a month to gather energy data about consumption, use, and u-values of buildings in Vienna city to rely on and build a  AI-UBREM dataset to put to test.  Multiple UN-funded projects and reliable governmental city websites, in addition to the AIT of Vienna city along with published data , reports, and simulation results are utilized to build both BEC and PV potential datasets
+An intensive research process for more than a month to gather energy data about consumption, use, and u-values of buildings in Vienna city to rely on and build a  AI-UBREM dataset to put to test.  Multiple UN-funded projects and reliable governmental city websites, in addition to the AIT of Vienna city along with published data , reports, and simulation results are utilized to build both BEC and PV potential datasets.
+
+Open street maps has been utilized to retrieve Vienna buildings data like geometry, building typology, height, level, long and lat and OSMID which builds our main geojson and geo-referenced files. 
 
 ![image](https://user-images.githubusercontent.com/108461498/180660406-dcb0da21-3190-49bb-9c61-49e3fdae42c4.png)
+
+
 
 <!-- Energy-Consumption -->
 ## Energy-Consumption
@@ -70,7 +79,6 @@ Tabula Project
 ![image](https://user-images.githubusercontent.com/108461498/180660421-57acc278-39de-4482-869c-f144564f3bd4.png)
 
  
-
 
 Entranze Project:
 
@@ -90,6 +98,13 @@ Links:
 1.	https://www.wien.gv.at/umweltgut/public/grafik.aspx?ThemePage=9
 2.	Tabula Project Vienna,  link: https://episcope.eu/fileadmin/tabula/public/docs/scientific/AT_TABULA_ScientificReport_AEA.pdf
 3.	Entranze Project by EU and UN Link: https://www.entranze.eu/files/downloads/D2_3/Heating_and_cooling_energy_demand_and_loads_for_building_types_in_different_countries_of_the_EU.pdf
+
+
+
+The idea is to retrieve data about buildings energy consumption , u-value of building envelop and link it to a renewable energy resource for future retrofitting and PED plan. 
+
+![image](https://user-images.githubusercontent.com/108461498/180661094-86e841b7-c5ad-4cef-90d1-e0115442c91c.png)
+
 
 <!-- Solar-Radiation -->
 ## Solar-Radiation
@@ -115,7 +130,7 @@ An intesive research process for more than a month to gather energy data about c
  
  ![image](https://user-images.githubusercontent.com/108461498/180660493-5e81b7b3-becd-4d6c-b5c0-45d57e3f568b.png)
 
-
+mse_test: 0.001160272629931569
  
 <!-- DNN-Solar-Radiation -->
 ## Dnn-Solar-Radiation
@@ -125,5 +140,44 @@ An intesive research process for more than a month to gather energy data about c
 <!-- Grasshopper-Scripts -->
 ## gh
 
+Grasshopper tool is not only used in simulation but it is utilized to test energy and solar radiation prediction from the ANN models generated. It is used to validate the final models and prove their reliability. 
+
+
+![image](https://user-images.githubusercontent.com/108461498/180660952-342003e2-19a8-485c-b6bd-f89ca1ceda19.png)
+
 <!-- Web-Development -->
 ## web
+Mapbox is the platform used to make AI-UBREM for Vienna available for users and accessible by real estate developers as well.  Files have been prepared for each layer. One main layer with whole Vienna buildings. Then, five layers for each building typology, residential, apartments, detached houses, schools, and office. Finally and the most significant layer for solar radiation prediction and calculating the PV potential for each buildings for roof. 
+
+
+AI in Architecture (iaac.net)
+
+Link: http://aia22.iaac.net:8080/
+
+![image](https://user-images.githubusercontent.com/108461498/180661124-427a6474-8890-4bc6-8bd2-6b5348714213.png)
+
+
+![image](https://user-images.githubusercontent.com/108461498/180661135-f4054db3-27fc-402b-8426-3e081bdb8e15.png)
+
+Layer_1
+Main layer for the city of Vienna to visulaize buildings, land-use, five- buildings typology energy consumption for heating, cooling , DHW, and total of these. 
+
+Layer_2
+The apartment typology layer where you alter the U-value of walls, windows, basement, and roof of a selected apartment building to predict the new BEC after the building retrofitting.
+Layer_3
+The detached housing typology layer where you alter the U-value of walls, windows, basement, and roof of a selected detached housing building to predict the new BEC after the building retrofitting.
+
+Layer_4
+The office typology layer where you alter the U-value of walls, windows, basement, and roof of a selected office building to predict the new BEC after the building retrofitting.
+
+Layer_5
+The residential typology layer where you alter the U-value of walls, windows, basement, and roof of a selected residential building to predict the new BEC after the building retrofitting.
+
+Layer_6
+The school typology layer where you alter the U-value of walls, windows, basement, and roof of a selected school building to predict the new BEC after the building retrofitting.
+
+
+Layer_7
+This solar radiation prediction of the selected buildings in vienna city . It refelcts the PV otential as renewable energy resource support to the building to meet its BEC. Hence, this contributes to meet PED conceptualization manifestation. 
+
+
